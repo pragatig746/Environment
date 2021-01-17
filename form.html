@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Environment</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/form.css') }}">
+</head>
+<body bgcolor="lightblue">
+<p>Check the Carbon Emission of your Country and try to start changing your habits today!</p>
+<div class="wrapper"><h1>Save Environment!</h1>
+<form action="{{ url_for("carbon")}}" method="post">
+<div class="field">
+<label for="countrycode">Country Code:</label><br/h>
+<input type="text" id="countrycode" name="ccheck" placeholder="CountryCode"><br/>
+<button type="submit">Submit</button>
+<center><a href="https://api.worldbank.org/v2/country">CountryCodes</a></center>
+</div>
+</form>
+</div>
+</body>
+</html>
